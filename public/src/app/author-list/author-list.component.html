@@ -1,0 +1,24 @@
+<h1>Favorite Authors</h1>
+
+<div>
+<a [routerLink]="['/create']">Add an Author</a>
+</div>
+
+
+<div>
+    <h3>We have quotes by:</h3>
+<div>
+    <table>
+        <tr>
+            <th>Author</th>
+            <th>Actions Available</th>
+        </tr>
+        <tr *ngFor="let list of allAuthors">
+            <td>{{list.authorName}}</td> <td><a href="/edit/{{list._id}}"><button>Edit</button></a>  <button (click)=deleteAuthors([list._id])>Delete</button></td>
+        </tr>
+    
+
+</table>
+</div>
+</div>
+

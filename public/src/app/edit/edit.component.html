@@ -1,0 +1,24 @@
+
+
+<div>
+    <a href="/authorslist">Home</a>
+    </div>
+
+    
+<div>
+<h4>Edit the author {{singleAuthors.authorName}}</h4>
+
+<form (submit)= "updateAuthor($event)">
+    <div>
+        <label for="authorName">
+            name:
+        </label>
+        <input type="text" id="authorName" name="authorName" [(ngModel)]="updatedAuthors.authorName">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</div>
+    <!-- Esta parte es para comprobar que el form este editando nuestro componente -->
+
+    {{updatedAuthors.authorName }}
+    <!-- finaliza two-way binding-->

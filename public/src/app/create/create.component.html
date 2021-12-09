@@ -1,0 +1,20 @@
+<div>
+    <a [routerLink]="['/authorslist']">Home</a>
+    </div>
+
+<div>
+<h4>Add a new author</h4>
+<form (submit)=createAuthor($event)>
+    <div>
+        <label for="authorName">
+            name:
+        </label>
+        <input type="text" id="authorName" name="authorName" [(ngModel)]="newAuthor.authorName">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</div>
+    <!-- Esta parte es para comprobar que el formeste editando nuestro componente -->
+
+    {{newAuthor.authorName }}
+    <!-- finaliza two-way binding-->
